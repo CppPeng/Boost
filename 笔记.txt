@@ -1,0 +1,7 @@
+1.在使用from_string()函数时会报错
+error LNK2019: 无法解析的外部符号 "public: static class boost::shared_ptr<class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,unsigned short,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,unsigned short> > > > __cdecl boost::gregorian::greg_month::get_month_map_ptr(void)" (?get_month_map_ptr@greg_month@gregorian@boost@@SA?AV?$shared_ptr@V?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@GU?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@G@std@@@2@@std@@@3@XZ)，该符号在函数 "unsigned short __cdecl boost::date_time::month_str_to_ushort<class boost::gregorian::greg_month>(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (??$month_str_to_ushort@Vgreg_month@gregorian@boost@@@date_time@boost@@YAGABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用	D:\C++\Boost\chap02\timer\date_time\main.obj	date_time
+
+解决方法:
+找到boost库目录下对应的.lib文件并加入
+#pragma comment(lib,"boost_date_time-vc120-mt-gd-x32-1_66.lib")
+
