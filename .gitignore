@@ -1,0 +1,13 @@
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+*.pdb
+*.obj
+*.log
+*.vcxproj
+*.sln
+*.sdf
+*.suo
+*.opensdf
+*.filters
+*.user
