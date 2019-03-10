@@ -43,5 +43,6 @@ int main(void){
 #endif
 	cout << to_simple_string(d5) << " " << to_iso_string(d5) << " " <<
 		to_iso_extended_string(d5) << endl;
+	cout << to_tm(d5).tm_hour << endl;
 	return 0;
 }
